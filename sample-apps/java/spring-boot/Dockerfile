@@ -29,10 +29,5 @@ COPY --from=build /app/target/demo-app-0.0.1-SNAPSHOT.jar ./demo-app.jar
 # Expose port 8080
 EXPOSE 8080
 
-# Define the command to run the application
+# Define the default command to run the application
 CMD ["java", "-jar", "demo-app.jar"]
-
-
-
-
-
