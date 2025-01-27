@@ -92,14 +92,20 @@
     </dependency>     -->
   </dependencies>
 
-<!--  Jib Maven plugin-->
-  <!-- <build>
+<!-- Exec Maven plugin-->
+  <build>
+   	
     <plugins>
       <plugin>
-        <groupId>com.google.cloud.tools</groupId>
-        <artifactId>jib-maven-plugin</artifactId>
-        <version>3.2.0</version>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.5.0</version>
+	<configuration>
+	  <mainClass>com.example.DemoApplication</mainClass>
+	</configuration>
       </plugin>
+
+      <!-- Spring Boot Maven Plugin -->
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -111,7 +117,7 @@
         </configuration>
       </plugin>
     </plugins>
-  </build> -->
+  </build>
 
   <!--  Spring profiles-->
   <!-- <profiles>
